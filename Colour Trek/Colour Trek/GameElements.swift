@@ -65,13 +65,13 @@ extension GameScene {
     
     switch type {
     case .small:
-      enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 70), cornerWidth: 8, cornerHeight: 8, transform: nil)
+      enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 40), cornerWidth: 8, cornerHeight: 8, transform: nil)
       enemySprite.fillColor = UIColor(red: 0.4431, green: 0.5529, blue: 0.7451, alpha: 1)
     case .medium:
-      enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 100), cornerWidth: 8, cornerHeight: 8, transform: nil)
+      enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 70), cornerWidth: 8, cornerHeight: 8, transform: nil)
       enemySprite.fillColor = UIColor(red: 0.7804, green: 0.4039, blue: 0.7451, alpha: 1)
     case .large:
-      enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 130), cornerWidth: 8, cornerHeight: 8, transform: nil)
+      enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 100), cornerWidth: 8, cornerHeight: 8, transform: nil)
       enemySprite.fillColor = UIColor(red: 0.7804, green: 0.6392, blue: 0.4039, alpha: 1)
     }
     
@@ -88,6 +88,28 @@ extension GameScene {
     enemySprite.physicsBody?.velocity = up ? CGVector(dx: 0, dy: velocityArray[track]) : CGVector(dx: 0, dy: -velocityArray[track])
     
     return enemySprite
+    
+  }
+  
+  func createPowerUp(forTrack track: Int) -> SKSpriteNode? {
+    let powerUpSprite = SKSpriteNode(imageNamed: "powerUp")
+    // Set it to enemy because we already wrote the logic for removing enemies
+    powerUpSprite.name = "ENEMY"
+    
+    powerUpSprite.physicsBody = SKPhysicsBody(circleOfRadius: powerUpSprite.size.width / 2)
+    powerUpSprite.physicsBody?.linearDamping = 0
+    powerUpSprite.physicsBody?.categoryBitMask = powerUpCategory
+    powerUpSprite.physicsBody?.collisionBitMask = 0
+    
+    let up = directionArray[track]
+    guard let powerUpXPosition = tracks?[track].position.x else { return nil }
+    
+    powerUpSprite.position.x = powerUpXPosition
+    powerUpSprite.position.y = up ? -130 : self.size.height + 130
+    
+    powerUpSprite.physicsBody?.velocity = up ? CGVector(dx: 0, dy: velocityArray[track]) : CGVector(dx: 0, dy: velocityArray[track])
+    
+    return powerUpSprite
     
   }
   

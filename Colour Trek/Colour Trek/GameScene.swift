@@ -9,18 +9,51 @@
 import SpriteKit
 import GameplayKit
 
-
-
 class GameScene: SKScene, SKPhysicsContactDelegate {
+  
+  func launchGameTimer() {
+    let timeAction = SKAction.repeatForever(SKAction.sequence([SKAction.run ({
+      self.remainingTime -= 1
+      
+      }), SKAction.wait(forDuration: 1)]))
+    
+    timeLabel?.run(timeAction)
+  }
+  
+  func createHUD() {
+    timeLabel = self.childNode(withName: "time") as? SKLabelNode
+    scoreLabel = self.childNode(withName: "score") as? SKLabelNode
+    
+    remainingTime = 8
+    currentScore = 0
+    
+  }
   
   var tracks: [SKSpriteNode]? = [SKSpriteNode]()
   var player: SKSpriteNode?
   var target: SKSpriteNode?
   
+  var timeLabel: SKLabelNode?
+  var scoreLabel: SKLabelNode?
+  var currentScore: Int = 0 {
+    didSet {
+      self.scoreLabel?.text = "SCORE: \(self.currentScore)"
+    }
+  }
+  var remainingTime: TimeInterval = 60 {
+    didSet {
+      self.timeLabel?.text = "TIME: \(Int(self.remainingTime))"
+    }
+  }
+  
   var currentTrack = 0
   var movingToTrack = false
   
   let moveSound = SKAction.playSoundFileNamed("Sounds/move.wav", waitForCompletion: false)
+  let failSound = SKAction.playSoundFileNamed("Sounds/fail.wav", waitForCompletion: false)
+  let levelUpSound = SKAction.playSoundFileNamed("Sounds/levelUp.wav", waitForCompletion: false)
+  
+  var backgroundNoise: SKAudioNode!
   
   let trackVelocities = [180, 200, 250]
   var directionArray = [Bool]()
@@ -29,18 +62,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   let playerCategory: UInt32 = 0x1      // 1
   let enemyCategory: UInt32 = 0x10      // 2
   let targetCategory: UInt32 = 0x11     // 3
-  
-
+  let powerUpCategory: UInt32 = 0x100   // 4
   
   // What to run when loads
   override func didMove(to view: SKView) {
     setupTracks()
     tracks?.first?.color = UIColor.green
     
+    createHUD()
+    launchGameTimer()
     createPlayer()
     createTarget()
     
     self.physicsWorld.contactDelegate = self
+    
+    if let musicURL = Bundle.main.url(forResource: "Sounds/background", withExtension: "wav") {
+      backgroundNoise = SKAudioNode(url: musicURL)
+      addChild(backgroundNoise)
+      
+    }
     
     
     if let numTracks = tracks?.count {
@@ -99,6 +139,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       }
       
     }
+    
+    if remainingTime <= 5 {
+      timeLabel?.fontColor = UIColor.red
+    }
+    
   }
   
   // What to run when 2 objects collide
@@ -119,6 +164,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == enemyCategory {
       // Player hits enemy
+      self.run(failSound)
       movePlayerToStart()
     
     } else if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == targetCategory {
