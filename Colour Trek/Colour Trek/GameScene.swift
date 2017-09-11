@@ -24,7 +24,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     timeLabel = self.childNode(withName: "time") as? SKLabelNode
     scoreLabel = self.childNode(withName: "score") as? SKLabelNode
     
-    remainingTime = 60
+    remainingTime = 3
     currentScore = 0
     
   }
@@ -138,11 +138,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         movePlayerToStart()
         
       }
-      
     }
     
     if remainingTime <= 5 {
       timeLabel?.fontColor = UIColor.red
+      
+      if remainingTime == 0 {
+        gameOver()
+      }
+      
     }
     
   }

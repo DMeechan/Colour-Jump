@@ -19,13 +19,12 @@ class StartScene: SKScene {
   override func didMove(to view: SKView) {
     playButton = self.childNode(withName: "startButton") as? SKSpriteNode
     
-    if let scrollingBG = ScrollingBackground.scrollingNodeWithImage(imageName: "loopBG", containerWidth: self.size.width) {
-      scrollingBG.scrollingSpeed = 10
-      scrollingBG.anchorPoint = .zero
-      
-      self.addChild(scrollingBG)
-      
-    }
+    
+    scrollingBG = ScrollingBackground.scrollingNodeWithImage(imageName: "loopBG", containerWidth: self.size.width)
+    scrollingBG?.scrollingSpeed = 10
+    scrollingBG?.anchorPoint = .zero
+    
+    self.addChild(scrollingBG!)
     
     
     if let musicURL = Bundle.main.url(forResource: "MenuHighscoreMusic", withExtension: "mp3") {

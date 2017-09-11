@@ -24,7 +24,7 @@ class GameOverScene : SKScene {
     
     playButton = self.childNode(withName: "startButton") as? SKSpriteNode
     
-    if let musicURL = Bundle.main.url(forResource: "MenuHighscoreMusic", withExtension: "mp3") {
+    if let musicURL = Bundle.main.url(forResource: "Sounds/MenuHighscoreMusic", withExtension: "mp3") {
       backgroundMusic = SKAudioNode(url: musicURL)
       addChild(backgroundMusic)
     }
@@ -39,7 +39,13 @@ class GameOverScene : SKScene {
       
       // Check if play button clicked
       if node == playButton {
-        
+        print("Restart clicked")
+        let transition = SKTransition.fade(withDuration: 1)
+        if let gameScene = SKScene(fileNamed: "gameScene") {
+          gameScene.scaleMode = .aspectFit
+          self.view?.presentScene(gameScene, transition: transition)
+          
+        }
       }
     }
   }

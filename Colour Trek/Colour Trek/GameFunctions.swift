@@ -82,7 +82,19 @@ extension GameScene {
     
   }
   
-  
+  func gameOver() {
+    let levelCompletedSound = SKAction.playSoundFileNamed("Sounds/levelCompleted.wav", waitForCompletion: false)
+    self.run(levelCompletedSound)
+    
+    let transition = SKTransition.fade(withDuration: 1)
+    if let gameOverScene = SKScene(fileNamed: "GameOverScene") {
+      
+      gameOverScene.scaleMode = .aspectFit
+      self.view?.presentScene(gameOverScene, transition: transition)
+      
+    }
+    
+  }
   
   // MARK: Spawning
   
