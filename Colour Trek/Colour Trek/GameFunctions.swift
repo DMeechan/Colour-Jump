@@ -70,7 +70,7 @@ extension GameScene {
     currentScore += 1
     
     self.run(levelUpSound)
-    if let emitter = SKEmitterNode(fileNamed: "Fireworks.sks") {
+    if let emitter = SKEmitterNode(fileNamed: "Particles/Fireworks.sks") {
       playerPhysicsBody.node?.addChild(emitter)
       
       self.run(SKAction.wait(forDuration: 0.5)) {
@@ -83,7 +83,6 @@ extension GameScene {
   }
   
   func gameOver() {
-    let levelCompletedSound = SKAction.playSoundFileNamed("Sounds/levelCompleted.wav", waitForCompletion: false)
     self.run(levelCompletedSound)
     
     let transition = SKTransition.fade(withDuration: 1)

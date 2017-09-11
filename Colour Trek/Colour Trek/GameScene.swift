@@ -53,6 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   let failSound = SKAction.playSoundFileNamed("Sounds/fail.wav", waitForCompletion: false)
   let levelUpSound = SKAction.playSoundFileNamed("Sounds/levelUp.wav", waitForCompletion: false)
   let powerUpSound = SKAction.playSoundFileNamed("Sounds/powerUp.wav", waitForCompletion: false)
+  let levelCompletedSound = SKAction.playSoundFileNamed("Sounds/levelCompleted.wav", waitForCompletion: false)
   
   var backgroundNoise: SKAudioNode!
   
