@@ -24,7 +24,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     timeLabel = self.childNode(withName: "time") as? SKLabelNode
     scoreLabel = self.childNode(withName: "score") as? SKLabelNode
     
-    remainingTime = 8
+    remainingTime = 60
     currentScore = 0
     
   }
@@ -52,6 +52,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   let moveSound = SKAction.playSoundFileNamed("Sounds/move.wav", waitForCompletion: false)
   let failSound = SKAction.playSoundFileNamed("Sounds/fail.wav", waitForCompletion: false)
   let levelUpSound = SKAction.playSoundFileNamed("Sounds/levelUp.wav", waitForCompletion: false)
+  let powerUpSound = SKAction.playSoundFileNamed("Sounds/powerUp.wav", waitForCompletion: false)
   
   var backgroundNoise: SKAudioNode!
   
@@ -169,6 +170,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     } else if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == targetCategory {
       nextLevel(playerPhysicsBody: playerBody)
+      
+    } else if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == powerUpCategory {
+      self.run(powerUpSound)
+      otherBody.node?.removeFromParent()
+      remainingTime += 5
       
     }
     

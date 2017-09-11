@@ -44,7 +44,7 @@ extension GameScene {
     
     // Deactivate collisions so it doesn't push others about
     player?.physicsBody?.collisionBitMask = 0
-    player?.physicsBody?.contactTestBitMask = enemyCategory | targetCategory
+    player?.physicsBody?.contactTestBitMask = enemyCategory | targetCategory | powerUpCategory
     
     guard let playerPos = tracks?.first?.position.x else { return }
     
