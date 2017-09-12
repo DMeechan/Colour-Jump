@@ -48,11 +48,10 @@ extension GameScene {
       player.run(moveAction, completion: {
         self.movingToTrack = false
         
-        if self.currentTrack != 8 {
-          self.player?.physicsBody?.velocity = up ? CGVector(dx: 0, dy: self.velocityArray[self.currentTrack]) : CGVector(dx: 0, dy: -self.velocityArray[self.currentTrack])
-        } else {
-          self.player?.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-        }
+        let upVelocity = CGVector(dx: 0, dy: self.velocityArray[self.currentTrack])
+        let downVelocity = CGVector(dx: 0, dy: -self.velocityArray[self.currentTrack])
+        
+        self.player?.physicsBody?.velocity = up ? upVelocity : downVelocity
         
       })
       currentTrack += 1
