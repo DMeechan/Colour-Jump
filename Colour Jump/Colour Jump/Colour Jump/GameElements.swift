@@ -52,7 +52,7 @@ extension GameScene {
     
     self.addChild(player!)
     
-    if let pulse = SKEmitterNode(fileNamed: "Pulse") {
+    if let pulse = SKEmitterNode(fileNamed: "Pulse.sks") {
       player?.addChild(pulse)
       pulse.position = CGPoint(x: 0, y: 0)
     }

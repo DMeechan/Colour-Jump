@@ -79,19 +79,24 @@ extension GameScene {
     currentScore += 1
     
     self.run(levelUpSound)
-    if let emitter = SKEmitterNode(fileNamed: "Particles/Fireworks.sks") {
+    if let emitter = SKEmitterNode(fileNamed: "Fireworks.sks") {
       playerPhysicsBody.node?.addChild(emitter)
       
       self.run(SKAction.wait(forDuration: 0.5)) {
         emitter.removeFromParent()
         self.movePlayerToStart()
-        
       }
+    } else {
+      // Add that here so that if it can't find the fireworks file, the player pos will still be reset
+      // But keep it inside the loop so there's a short delay so you can see fireworks too
+      self.movePlayerToStart()
+      print("Error: couldn't find Fireworks.sks file")
+      
     }
-    
   }
   
   func gameOver() {
+    GameHandler.shared.saveGameStats()
     self.run(levelCompletedSound)
     
     let transition = SKTransition.fade(withDuration: 1)

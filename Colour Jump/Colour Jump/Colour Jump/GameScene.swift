@@ -20,9 +20,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   var currentScore: Int = 0 {
     didSet {
       self.scoreLabel?.text = "SCORE: \(self.currentScore)"
+      GameHandler.shared.score = currentScore
     }
   }
-  var remainingTime: TimeInterval = 60 {
+  var remainingTime: TimeInterval = 0 {
     didSet {
       self.timeLabel?.text = "TIME: \(Int(self.remainingTime))"
     }
@@ -178,6 +179,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       movePlayerToStart()
     
     } else if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == targetCategory {
+      // Player hits target
       nextLevel(playerPhysicsBody: playerBody)
       
     } else if playerBody.categoryBitMask == playerCategory && otherBody.categoryBitMask == powerUpCategory {

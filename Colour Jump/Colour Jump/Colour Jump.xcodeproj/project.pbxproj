@@ -96,12 +96,12 @@
 		651306DF1F67E47F00B4D46C /* SCENES */ = {
 			isa = PBXGroup;
 			children = (
-				651306C11F67E45800B4D46C /* GameOverScene.sks */,
-				651306C21F67E45800B4D46C /* GameOverScene.swift */,
-				651306C31F67E45800B4D46C /* GameScene.sks */,
 				651306C41F67E45800B4D46C /* GameScene.swift */,
-				651306CA1F67E45800B4D46C /* StartScene.sks */,
+				651306C21F67E45800B4D46C /* GameOverScene.swift */,
 				651306CB1F67E45800B4D46C /* StartScene.swift */,
+				651306C11F67E45800B4D46C /* GameOverScene.sks */,
+				651306C31F67E45800B4D46C /* GameScene.sks */,
+				651306CA1F67E45800B4D46C /* StartScene.sks */,
 			);
 			name = SCENES;
 			sourceTree = "<group>";
