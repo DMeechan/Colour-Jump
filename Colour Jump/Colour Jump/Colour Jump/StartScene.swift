@@ -27,7 +27,7 @@ class StartScene: SKScene {
     self.addChild(scrollingBG!)
     
     
-    if let musicURL = Bundle.main.url(forResource: "MenuHighscoreMusic", withExtension: "mp3") {
+    if let musicURL = Bundle.main.url(forResource: "Sounds/MenuHighscoreMusic", withExtension: "mp3") {
       backgroundMusic = SKAudioNode(url: musicURL)
       addChild(backgroundMusic)
     }

@@ -11,24 +11,6 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
   
-  func launchGameTimer() {
-    let timeAction = SKAction.repeatForever(SKAction.sequence([SKAction.run ({
-      self.remainingTime -= 1
-      
-      }), SKAction.wait(forDuration: 1)]))
-    
-    timeLabel?.run(timeAction)
-  }
-  
-  func createHUD() {
-    timeLabel = self.childNode(withName: "time") as? SKLabelNode
-    scoreLabel = self.childNode(withName: "score") as? SKLabelNode
-    
-    remainingTime = 3
-    currentScore = 0
-    
-  }
-  
   var tracks: [SKSpriteNode]? = [SKSpriteNode]()
   var player: SKSpriteNode?
   var target: SKSpriteNode?
@@ -66,6 +48,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   let targetCategory: UInt32 = 0x11     // 3
   let powerUpCategory: UInt32 = 0x100   // 4
   
+  // MARK: LAUNCH
+  func launchGameTimer() {
+    let timeAction = SKAction.repeatForever(SKAction.sequence([SKAction.run ({
+      self.remainingTime -= 1
+      
+    }), SKAction.wait(forDuration: 1)]))
+    
+    timeLabel?.run(timeAction)
+  }
+  
+  func createHUD() {
+    timeLabel = self.childNode(withName: "time") as? SKLabelNode
+    scoreLabel = self.childNode(withName: "score") as? SKLabelNode
+    
+    remainingTime = 60
+    currentScore = 0
+    
+  }
+  
   // What to run when loads
   override func didMove(to view: SKView) {
     setupTracks()
@@ -101,7 +102,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
 
-  
+  // MARK: BUTTON CONTROLS
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     if let touch = touches.first {
       let location = touch.previousLocation(in: self)
@@ -133,7 +134,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
   }
   
+  // MARK: RUN CONTINUOUSLY
   override func update(_ currentTime: TimeInterval) {
+    // Reset player if moves off-screen
     if let player = self.player {
       if player.position.y > self.size.height || player.position.y < 0 {
         movePlayerToStart()
@@ -141,6 +144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       }
     }
     
+    // Check if running out of time
     if remainingTime <= 5 {
       timeLabel?.fontColor = UIColor.red
       
@@ -152,7 +156,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
   }
   
-  // What to run when 2 objects collide
+  // MARK: COLLISIONS
   func didBegin(_ contact: SKPhysicsContact) {
     var playerBody: SKPhysicsBody
     var otherBody: SKPhysicsBody

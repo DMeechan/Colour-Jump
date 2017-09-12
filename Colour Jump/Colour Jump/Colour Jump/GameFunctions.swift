@@ -32,7 +32,14 @@ extension GameScene {
     player?.removeAllActions()
     movingToTrack = true
     
+    if currentTrack + 1 == tracks?.count {
+      // Prevent a crash when the user tries to go past final track
+      return
+      
+    }
+    
     guard let nextTrack = tracks?[currentTrack + 1].position else { return }
+
     
     if let player = self.player {
       let moveAction = SKAction.move(to: CGPoint(x: nextTrack.x, y: player.position.y), duration: 0.2)
@@ -65,6 +72,8 @@ extension GameScene {
       
     }
   }
+  
+  // MARK: Progress game state
   
   func nextLevel(playerPhysicsBody: SKPhysicsBody) {
     currentScore += 1

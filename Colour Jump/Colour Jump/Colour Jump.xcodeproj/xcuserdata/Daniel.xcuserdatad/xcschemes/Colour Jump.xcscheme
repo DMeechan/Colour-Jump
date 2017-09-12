@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65FC9B501F58612000ABB9AC"
-               BuildableName = "Colour Trek.app"
-               BlueprintName = "Colour Trek"
-               ReferencedContainer = "container:Colour Trek.xcodeproj">
+               BlueprintIdentifier = "6513069E1F67E40400B4D46C"
+               BuildableName = "Colour Jump.app"
+               BlueprintName = "Colour Jump"
+               ReferencedContainer = "container:Colour Jump.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65FC9B501F58612000ABB9AC"
-            BuildableName = "Colour Trek.app"
-            BlueprintName = "Colour Trek"
-            ReferencedContainer = "container:Colour Trek.xcodeproj">
+            BlueprintIdentifier = "6513069E1F67E40400B4D46C"
+            BuildableName = "Colour Jump.app"
+            BlueprintName = "Colour Jump"
+            ReferencedContainer = "container:Colour Jump.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65FC9B501F58612000ABB9AC"
-            BuildableName = "Colour Trek.app"
-            BlueprintName = "Colour Trek"
-            ReferencedContainer = "container:Colour Trek.xcodeproj">
+            BlueprintIdentifier = "6513069E1F67E40400B4D46C"
+            BuildableName = "Colour Jump.app"
+            BlueprintName = "Colour Jump"
+            ReferencedContainer = "container:Colour Jump.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65FC9B501F58612000ABB9AC"
-            BuildableName = "Colour Trek.app"
-            BlueprintName = "Colour Trek"
-            ReferencedContainer = "container:Colour Trek.xcodeproj">
+            BlueprintIdentifier = "6513069E1F67E40400B4D46C"
+            BuildableName = "Colour Jump.app"
+            BlueprintName = "Colour Jump"
+            ReferencedContainer = "container:Colour Jump.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

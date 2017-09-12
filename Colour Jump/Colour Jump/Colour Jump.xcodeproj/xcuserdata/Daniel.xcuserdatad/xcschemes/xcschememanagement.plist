@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Colour Trek.xcscheme</key>
+		<key>Colour Jump.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>65FC9B501F58612000ABB9AC</key>
+		<key>6513069E1F67E40400B4D46C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
