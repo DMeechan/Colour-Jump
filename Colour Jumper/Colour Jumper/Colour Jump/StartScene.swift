@@ -42,10 +42,6 @@ class StartScene: SKScene {
       
       // Check if play button clicked
       if node == playButton {
-        
-        print("Time to crash!")
-        Crashlytics.sharedInstance().crash()
-        
         let transition = SKTransition.fade(withDuration: 1)
         gameScene = SKScene(fileNamed: "GameScene")
         gameScene.scaleMode = .aspectFit

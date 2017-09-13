@@ -34,7 +34,6 @@ class GameOverScene: SKScene, GADInterstitialDelegate {
     }
     
     if let view = self.view?.window?.rootViewController {
-      print("ad!!!!!")
       GameHandler.shared.showInterstitialAd(viewController: view, delgate: self)
     }
     
