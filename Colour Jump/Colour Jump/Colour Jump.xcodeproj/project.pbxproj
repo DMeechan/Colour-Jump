@@ -81,12 +81,10 @@
 		651306A11F67E40400B4D46C /* Colour Jump */ = {
 			isa = PBXGroup;
 			children = (
-				651306BB1F67E45800B4D46C /* Actions.sks */,
 				651306E11F67E58D00B4D46C /* Extras */,
 				651306E01F67E56200B4D46C /* Particles */,
 				651306E21F67E59D00B4D46C /* Controllers */,
 				651306DF1F67E47F00B4D46C /* SCENES */,
-				651306C81F67E45800B4D46C /* ScrollingBackground.swift */,
 				651306C91F67E45800B4D46C /* Sounds */,
 				651306AF1F67E40400B4D46C /* Assets.xcassets */,
 			);
@@ -121,6 +119,8 @@
 				651306BC1F67E45800B4D46C /* AppDelegate.swift */,
 				651306C61F67E45800B4D46C /* Info.plist */,
 				651306B11F67E40400B4D46C /* LaunchScreen.storyboard */,
+				651306C81F67E45800B4D46C /* ScrollingBackground.swift */,
+				651306BB1F67E45800B4D46C /* Actions.sks */,
 			);
 			name = Extras;
 			sourceTree = "<group>";
@@ -130,8 +130,8 @@
 			children = (
 				651306BE1F67E45800B4D46C /* GameElements.swift */,
 				651306BF1F67E45800B4D46C /* GameFunctions.swift */,
-				651306C01F67E45800B4D46C /* GameHandler.swift */,
 				651306C51F67E45800B4D46C /* GameViewController.swift */,
+				651306C01F67E45800B4D46C /* GameHandler.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

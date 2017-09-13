@@ -26,6 +26,19 @@ extension GameScene {
       }
       i += 1
     }
+    
+    if let numTracks = tracks?.count {
+      for _ in 0 ... numTracks {
+        let randomVelocity = GKRandomSource.sharedRandom().nextInt(upperBound: 3)
+        velocityArray.append(trackVelocities[randomVelocity])
+        directionArray.append(GKRandomSource.sharedRandom().nextBool())
+      }
+      
+      velocityArray[0] = 0
+      velocityArray[numTracks - 1] = 0
+      
+    }
+    
   }
   
   func createTarget() {
@@ -66,13 +79,16 @@ extension GameScene {
     switch type {
     case .small:
       enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 40), cornerWidth: 8, cornerHeight: 8, transform: nil)
-      enemySprite.fillColor = UIColor(red: 0.4431, green: 0.5529, blue: 0.7451, alpha: 1)
+      enemySprite.fillColor = GameHandler.shared.pink
+      // UIColor(red: 0.4431, green: 0.5529, blue: 0.7451, alpha: 1)
     case .medium:
       enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 70), cornerWidth: 8, cornerHeight: 8, transform: nil)
-      enemySprite.fillColor = UIColor(red: 0.7804, green: 0.4039, blue: 0.7451, alpha: 1)
+      enemySprite.fillColor = GameHandler.shared.green
+      // UIColor(red: 0.7804, green: 0.4039, blue: 0.7451, alpha: 1)
     case .large:
       enemySprite.path = CGPath(roundedRect: CGRect(x: -10, y: 0, width: 20, height: 100), cornerWidth: 8, cornerHeight: 8, transform: nil)
-      enemySprite.fillColor = UIColor(red: 0.7804, green: 0.6392, blue: 0.4039, alpha: 1)
+      enemySprite.fillColor = GameHandler.shared.indigo
+      // UIColor(red: 0.7804, green: 0.6392, blue: 0.4039, alpha: 1)
     }
     
     guard let enemyPosition = tracks?[track].position else { return nil }

@@ -73,7 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   // What to run when loads
   override func didMove(to view: SKView) {
     setupTracks()
-    tracks?.first?.color = UIColor.green
+    tracks?.first?.color = GameHandler.shared.green
     
     createHUD()
     launchGameTimer()
@@ -86,15 +86,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       backgroundNoise = SKAudioNode(url: musicURL)
       addChild(backgroundNoise)
       
-    }
-    
-    
-    if let numTracks = tracks?.count {
-      for _ in 0 ... numTracks {
-        let randomVelocity = GKRandomSource.sharedRandom().nextInt(upperBound: 3)
-        velocityArray.append(trackVelocities[randomVelocity])
-        directionArray.append(GKRandomSource.sharedRandom().nextBool())
-      }
     }
     
     // Loop through forever, spawning enemies every 2 seconds
