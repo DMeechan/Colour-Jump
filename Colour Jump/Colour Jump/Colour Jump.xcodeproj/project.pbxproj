@@ -20,15 +20,19 @@
 		651306D51F67E45800B4D46C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 651306C31F67E45800B4D46C /* GameScene.sks */; };
 		651306D61F67E45800B4D46C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306C41F67E45800B4D46C /* GameScene.swift */; };
 		651306D71F67E45800B4D46C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306C51F67E45800B4D46C /* GameViewController.swift */; };
-		651306D81F67E45800B4D46C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 651306C61F67E45800B4D46C /* Info.plist */; };
 		651306D91F67E45800B4D46C /* Pulse.sks in Resources */ = {isa = PBXBuildFile; fileRef = 651306C71F67E45800B4D46C /* Pulse.sks */; };
 		651306DA1F67E45800B4D46C /* ScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306C81F67E45800B4D46C /* ScrollingBackground.swift */; };
 		651306DB1F67E45800B4D46C /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 651306C91F67E45800B4D46C /* Sounds */; };
 		651306DC1F67E45800B4D46C /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 651306CA1F67E45800B4D46C /* StartScene.sks */; };
 		651306DD1F67E45800B4D46C /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651306CB1F67E45800B4D46C /* StartScene.swift */; };
+		6578B7021F69320A00D33160 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6578B7011F69320A00D33160 /* Default-568h@2x.png */; };
+		65E570321F6921970015B145 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65E570311F6921970015B145 /* GoogleService-Info.plist */; };
+		D46519017D32CDCE6A3E046F /* Pods_Colour_Jump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5271B680D0AE0275B0FFC7CB /* Pods_Colour_Jump.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C94BE7D7CE8F97D2AB81398 /* Pods-Colour Jump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colour Jump.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Colour Jump/Pods-Colour Jump.debug.xcconfig"; sourceTree = "<group>"; };
+		5271B680D0AE0275B0FFC7CB /* Pods_Colour_Jump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colour_Jump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6513069F1F67E40400B4D46C /* Colour Jump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Colour Jump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		651306AF1F67E40400B4D46C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		651306B21F67E40400B4D46C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,9 @@
 		651306C91F67E45800B4D46C /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		651306CA1F67E45800B4D46C /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		651306CB1F67E45800B4D46C /* StartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		6578B7011F69320A00D33160 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		65E570311F6921970015B145 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC1FCEA11E3530686A68C2B6 /* Pods-Colour Jump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colour Jump.release.xcconfig"; path = "Pods/Target Support Files/Pods-Colour Jump/Pods-Colour Jump.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,17 +63,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46519017D32CDCE6A3E046F /* Pods_Colour_Jump.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57D68642496D56BF793FDBE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5271B680D0AE0275B0FFC7CB /* Pods_Colour_Jump.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		651306961F67E40400B4D46C = {
 			isa = PBXGroup;
 			children = (
+				6578B7011F69320A00D33160 /* Default-568h@2x.png */,
 				651306A11F67E40400B4D46C /* Colour Jump */,
 				651306A01F67E40400B4D46C /* Products */,
+				FFAB5E4116459F2D2300776E /* Pods */,
+				57D68642496D56BF793FDBE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +140,7 @@
 				651306B11F67E40400B4D46C /* LaunchScreen.storyboard */,
 				651306C81F67E45800B4D46C /* ScrollingBackground.swift */,
 				651306BB1F67E45800B4D46C /* Actions.sks */,
+				65E570311F6921970015B145 /* GoogleService-Info.plist */,
 			);
 			name = Extras;
 			sourceTree = "<group>";
@@ -130,10 +150,19 @@
 			children = (
 				651306BE1F67E45800B4D46C /* GameElements.swift */,
 				651306BF1F67E45800B4D46C /* GameFunctions.swift */,
-				651306C51F67E45800B4D46C /* GameViewController.swift */,
 				651306C01F67E45800B4D46C /* GameHandler.swift */,
+				651306C51F67E45800B4D46C /* GameViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FFAB5E4116459F2D2300776E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C94BE7D7CE8F97D2AB81398 /* Pods-Colour Jump.debug.xcconfig */,
+				FC1FCEA11E3530686A68C2B6 /* Pods-Colour Jump.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 651306B71F67E40400B4D46C /* Build configuration list for PBXNativeTarget "Colour Jump" */;
 			buildPhases = (
+				968FA65A158A01C06AC7DE93 /* [CP] Check Pods Manifest.lock */,
 				6513069B1F67E40400B4D46C /* Sources */,
 				6513069C1F67E40400B4D46C /* Frameworks */,
 				6513069D1F67E40400B4D46C /* Resources */,
+				BF73300395C1EF166972B2E0 /* [CP] Embed Pods Frameworks */,
+				92477DC6B6B8866AC87AAE3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				651306CF1F67E45800B4D46C /* Fireworks.sks in Resources */,
+				6578B7021F69320A00D33160 /* Default-568h@2x.png in Resources */,
 				651306D91F67E45800B4D46C /* Pulse.sks in Resources */,
 				651306B01F67E40400B4D46C /* Assets.xcassets in Resources */,
 				651306DC1F67E45800B4D46C /* StartScene.sks in Resources */,
@@ -205,12 +238,68 @@
 				651306CD1F67E45800B4D46C /* Actions.sks in Resources */,
 				651306D31F67E45800B4D46C /* GameOverScene.sks in Resources */,
 				651306D51F67E45800B4D46C /* GameScene.sks in Resources */,
+				65E570321F6921970015B145 /* GoogleService-Info.plist in Resources */,
 				651306B31F67E40400B4D46C /* LaunchScreen.storyboard in Resources */,
-				651306D81F67E45800B4D46C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92477DC6B6B8866AC87AAE3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Colour Jump/Pods-Colour Jump-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		968FA65A158A01C06AC7DE93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Colour Jump-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF73300395C1EF166972B2E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Colour Jump/Pods-Colour Jump-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Colour Jump/Pods-Colour Jump-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6513069B1F67E40400B4D46C /* Sources */ = {
@@ -340,6 +429,7 @@
 		};
 		651306B81F67E40400B4D46C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C94BE7D7CE8F97D2AB81398 /* Pods-Colour Jump.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -351,11 +441,13 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Colour Jump/Colour Jump-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		651306B91F67E40400B4D46C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1FCEA11E3530686A68C2B6 /* Pods-Colour Jump.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -366,6 +458,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Colour Jump/Colour Jump-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -388,6 +481,7 @@
 				651306B91F67E40400B4D46C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

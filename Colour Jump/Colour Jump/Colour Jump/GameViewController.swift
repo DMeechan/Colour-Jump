@@ -29,8 +29,8 @@ class GameViewController: UIViewController {
     
     wrapperView.ignoresSiblingOrder = true
     
-    wrapperView.showsFPS = true
-    wrapperView.showsNodeCount = true
+    wrapperView.showsFPS = false
+    wrapperView.showsNodeCount = false
     
   }
   

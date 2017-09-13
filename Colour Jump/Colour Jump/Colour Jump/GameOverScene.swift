@@ -7,8 +7,10 @@
 //
 
 import SpriteKit
+import Firebase
+import GoogleMobileAds
 
-class GameOverScene : SKScene {
+class GameOverScene: SKScene, GADInterstitialDelegate {
   
   var lastScoreLabel:SKLabelNode?
   var bestScoreLabel:SKLabelNode?
@@ -31,6 +33,12 @@ class GameOverScene : SKScene {
       addChild(backgroundMusic)
     }
     
+    if let view = self.view?.window?.rootViewController {
+      print("ad!!!!!")
+      GameHandler.shared.showInterstitialAd(viewController: view, delgate: self)
+    }
+    
+    GameHandler.shared.logGameOver()
     
   }
   
@@ -41,6 +49,8 @@ class GameOverScene : SKScene {
       
       // Check if play button clicked
       if node == playButton {
+        GameHandler.shared.loadIntertitialAd()
+        
         let transition = SKTransition.fade(withDuration: 1)
         if let gameScene = SKScene(fileNamed: "GameScene") {
           gameScene.scaleMode = .aspectFit

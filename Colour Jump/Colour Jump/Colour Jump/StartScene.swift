@@ -31,6 +31,7 @@ class StartScene: SKScene {
       backgroundMusic = SKAudioNode(url: musicURL)
       addChild(backgroundMusic)
     }
+    
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

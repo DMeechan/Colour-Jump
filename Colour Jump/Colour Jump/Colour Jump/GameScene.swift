@@ -93,6 +93,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.spawnEnemies()
       }, SKAction.wait(forDuration: 2)])))
     
+    GameHandler.shared.logGameStart()
+    
   }
   
 

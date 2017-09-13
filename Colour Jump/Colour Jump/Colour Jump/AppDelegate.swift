@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
     
     window?.rootViewController = GameViewController()
+    
+    let appID = "ca-app-pub-4605466962808569~5941669316"
+    GADMobileAds.configure(withApplicationID: appID)
+    FirebaseApp.configure()
     
     return true
     

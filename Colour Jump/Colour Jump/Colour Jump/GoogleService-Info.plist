@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>400792359271-itv5p3b7s2aoblc49kpiq5bs97tv6fv2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.400792359271-itv5p3b7s2aoblc49kpiq5bs97tv6fv2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC53pHSEB6PKe1Lxyb_27qNcE8q6i6_rjI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>400792359271</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>co.meechan.Colour-Jump</string>
+	<key>PROJECT_ID</key>
+	<string>colour-jumper</string>
+	<key>STORAGE_BUCKET</key>
+	<string>colour-jumper.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:400792359271:ios:3d33379ac08aca86</string>
+	<key>DATABASE_URL</key>
+	<string>https://colour-jumper.firebaseio.com</string>
+</dict>
+</plist>

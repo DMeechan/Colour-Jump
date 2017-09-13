@@ -1,0 +1,6 @@
+framework module Pods_Colour_Jump {
+  umbrella header "Pods-Colour Jump-umbrella.h"
+
+  export *
+  module * { export * }
+}
